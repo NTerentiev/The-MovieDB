@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="B7o-lZ-zTm">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Popular-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="The_MovieDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search..." translatesAutoresizingMaskIntoConstraints="NO" id="ciz-jc-QdC">
+                                <rect key="frame" x="0.0" y="36" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="xcQ-OL-yfb"/>
+                                </connections>
+                            </searchBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pIm-kq-VgX">
+                                <rect key="frame" x="44" y="92" width="326" height="32"/>
+                                <color key="backgroundColor" red="0.047118134800000003" green="0.13398557899999999" blue="0.2353069186" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <segments>
+                                    <segment title="Movies"/>
+                                    <segment title="Series"/>
+                                </segments>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <color key="selectedSegmentTintColor" red="0.50873654525221201" green="0.77326625212262401" blue="0.7159752159416406" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ciz-jc-QdC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="36" id="65f-j0-Uxl"/>
+                            <constraint firstItem="ciz-jc-QdC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EGc-nK-G59"/>
+                            <constraint firstItem="ciz-jc-QdC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="P5Y-7q-egw"/>
+                            <constraint firstItem="pIm-kq-VgX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="R3f-Cg-6zY"/>
+                            <constraint firstItem="pIm-kq-VgX" firstAttribute="top" secondItem="ciz-jc-QdC" secondAttribute="bottom" id="cjd-BZ-hdS"/>
+                            <constraint firstItem="ciz-jc-QdC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="e3Z-4B-1sk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pIm-kq-VgX" secondAttribute="trailing" constant="44" id="hFj-AJ-iVh"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Popular" image="film.stack.fill" catalog="system" id="Wvt-Uy-og8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="968.11594202898561" y="-2.0089285714285712"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="lyt-WY-fnX">
+            <objects>
+                <viewController id="OVn-12-bb9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V1N-DN-Xj0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4XR-sS-1if"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="star.circle.fill" catalog="system" id="VEb-oT-aix"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BGs-Yb-Mec" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944" y="623"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="62K-ag-lba">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="B7o-lZ-zTm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vX6-C8-qdt">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.047118134800000003" green="0.13398557899999999" blue="0.2353069186" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="zFi-iz-BdM"/>
+                        <segue destination="OVn-12-bb9" kind="relationship" relationship="viewControllers" id="9dA-Zg-elL"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l6f-Mm-Xiu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-157" y="395"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="film.stack.fill" catalog="system" width="128" height="122"/>
+        <image name="star.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
