@@ -17,15 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="Search..." translatesAutoresizingMaskIntoConstraints="NO" id="ciz-jc-QdC">
-                                <rect key="frame" x="0.0" y="36" width="414" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="xcQ-OL-yfb"/>
-                                </connections>
-                            </searchBar>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pIm-kq-VgX">
-                                <rect key="frame" x="44" y="92" width="326" height="32"/>
+                                <rect key="frame" x="20" y="131" width="374" height="32"/>
                                 <color key="backgroundColor" red="0.047118134800000003" green="0.13398557899999999" blue="0.2353069186" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <segments>
                                     <segment title="Movies"/>
@@ -34,17 +27,38 @@
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <color key="selectedSegmentTintColor" red="0.50873654525221201" green="0.77326625212262401" blue="0.7159752159416406" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2Vh-zc-dD4">
+                                <rect key="frame" x="0.0" y="170" width="414" height="643"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="rEg-oQ-ZvX"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="eRa-I7-3TU"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" placeholder="Search..." translatesAutoresizingMaskIntoConstraints="NO" id="ciz-jc-QdC">
+                                <rect key="frame" x="0.0" y="48" width="414" height="56"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <color key="barTintColor" red="0.50199484829999996" green="0.66170799729999996" blue="0.70197045800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="xcQ-OL-yfb"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.50256062386108369" green="0.65971961003280721" blue="0.70498510486608412" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="ciz-jc-QdC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="36" id="65f-j0-Uxl"/>
-                            <constraint firstItem="ciz-jc-QdC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EGc-nK-G59"/>
-                            <constraint firstItem="ciz-jc-QdC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="P5Y-7q-egw"/>
-                            <constraint firstItem="pIm-kq-VgX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="R3f-Cg-6zY"/>
-                            <constraint firstItem="pIm-kq-VgX" firstAttribute="top" secondItem="ciz-jc-QdC" secondAttribute="bottom" id="cjd-BZ-hdS"/>
-                            <constraint firstItem="ciz-jc-QdC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="e3Z-4B-1sk"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pIm-kq-VgX" secondAttribute="trailing" constant="44" id="hFj-AJ-iVh"/>
+                            <constraint firstItem="ciz-jc-QdC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="48" id="3bv-3N-eCK"/>
+                            <constraint firstItem="2Vh-zc-dD4" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="4fl-4Z-NuY"/>
+                            <constraint firstItem="pIm-kq-VgX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4ur-Xn-9ux"/>
+                            <constraint firstItem="pIm-kq-VgX" firstAttribute="top" secondItem="ciz-jc-QdC" secondAttribute="bottom" constant="27" id="65C-cJ-88O"/>
+                            <constraint firstItem="2Vh-zc-dD4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QxC-vZ-xbg"/>
+                            <constraint firstItem="ciz-jc-QdC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ViP-FM-HDb"/>
+                            <constraint firstItem="2Vh-zc-dD4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bxr-v4-dIC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pIm-kq-VgX" secondAttribute="trailing" constant="20" id="s8N-LL-N9h"/>
+                            <constraint firstItem="ciz-jc-QdC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yR2-Pd-cHz"/>
+                            <constraint firstItem="2Vh-zc-dD4" firstAttribute="top" secondItem="pIm-kq-VgX" secondAttribute="bottom" constant="8" id="zpn-jJ-dUl"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Popular" image="film.stack.fill" catalog="system" id="Wvt-Uy-og8"/>
@@ -60,14 +74,30 @@
                     <view key="view" contentMode="scaleToFill" id="V1N-DN-Xj0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Mdz-jV-LpU">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="OVn-12-bb9" id="P4o-Jg-DzM"/>
+                                    <outlet property="delegate" destination="OVn-12-bb9" id="ivO-Gv-unj"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="4XR-sS-1if"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.3353281347" green="0.63438552479999999" blue="0.70498510489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Mdz-jV-LpU" firstAttribute="leading" secondItem="4XR-sS-1if" secondAttribute="leading" id="3op-QG-0QY"/>
+                            <constraint firstItem="Mdz-jV-LpU" firstAttribute="trailing" secondItem="4XR-sS-1if" secondAttribute="trailing" id="NqN-kg-y4c"/>
+                            <constraint firstItem="Mdz-jV-LpU" firstAttribute="top" secondItem="V1N-DN-Xj0" secondAttribute="top" id="O7u-VY-wLX"/>
+                            <constraint firstAttribute="bottom" secondItem="Mdz-jV-LpU" secondAttribute="bottom" id="ref-nG-TM9"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favorites" image="star.circle.fill" catalog="system" id="VEb-oT-aix"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BGs-Yb-Mec" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="944" y="623"/>
+            <point key="canvasLocation" x="966.66666666666674" y="646.875"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="62K-ag-lba">
@@ -96,6 +126,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
