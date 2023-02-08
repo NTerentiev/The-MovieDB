@@ -39,7 +39,7 @@
                                 <rect key="frame" x="0.0" y="48" width="414" height="56"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                                 <color key="tintColor" systemColor="systemOrangeColor"/>
-                                <color key="barTintColor" red="0.50199484829999996" green="0.66170799729999996" blue="0.70197045800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="xcQ-OL-yfb"/>
@@ -47,7 +47,7 @@
                             </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.50256062386108369" green="0.65971961003280721" blue="0.70498510486608412" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.095817142694118437" green="0.064063216785582439" blue="0.21178714613005001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="ciz-jc-QdC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="48" id="3bv-3N-eCK"/>
                             <constraint firstItem="2Vh-zc-dD4" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="4fl-4Z-NuY"/>
@@ -62,6 +62,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Popular" image="film.stack.fill" catalog="system" id="Wvt-Uy-og8"/>
+                    <connections>
+                        <outlet property="tableView" destination="2Vh-zc-dD4" id="IZh-33-tAl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,28 +73,12 @@
         <!--Favorites-->
         <scene sceneID="lyt-WY-fnX">
             <objects>
-                <viewController id="OVn-12-bb9" sceneMemberID="viewController">
+                <viewController id="OVn-12-bb9" customClass="FavoriteViewController" customModule="The_MovieDB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V1N-DN-Xj0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Mdz-jV-LpU">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="OVn-12-bb9" id="P4o-Jg-DzM"/>
-                                    <outlet property="delegate" destination="OVn-12-bb9" id="ivO-Gv-unj"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="4XR-sS-1if"/>
                         <color key="backgroundColor" red="0.3353281347" green="0.63438552479999999" blue="0.70498510489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="Mdz-jV-LpU" firstAttribute="leading" secondItem="4XR-sS-1if" secondAttribute="leading" id="3op-QG-0QY"/>
-                            <constraint firstItem="Mdz-jV-LpU" firstAttribute="trailing" secondItem="4XR-sS-1if" secondAttribute="trailing" id="NqN-kg-y4c"/>
-                            <constraint firstItem="Mdz-jV-LpU" firstAttribute="top" secondItem="V1N-DN-Xj0" secondAttribute="top" id="O7u-VY-wLX"/>
-                            <constraint firstAttribute="bottom" secondItem="Mdz-jV-LpU" secondAttribute="bottom" id="ref-nG-TM9"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favorites" image="star.circle.fill" catalog="system" id="VEb-oT-aix"/>
                 </viewController>
@@ -105,6 +92,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="B7o-lZ-zTm" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vX6-C8-qdt">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.047118134800000003" green="0.13398557899999999" blue="0.2353069186" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
