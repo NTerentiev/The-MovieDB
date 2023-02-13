@@ -15,7 +15,8 @@ class TrendsViewModel {
             AF.request(Net.trending).responseDecodable(of: TopModel.self) { listOfMovies in
             let requestResult = listOfMovies.value?.results ?? []
             self.arrayTitleFilm = requestResult.map{ Post(request: $0) }
-                completion()
+            self.arrayTitleFilm = self.arrayTitleFilm.filter{ $0.filmName != nil }
+            completion()
         }
     }
     

@@ -7,9 +7,9 @@
 
 import Foundation
 
-enum APIs: String {
-    case poster = "https://image.tmdb.org/t/p/w500"
-}
+//enum APIs: String {
+//    case poster = "https://image.tmdb.org/t/p/w500"
+//}
 
 struct Net {
     static let poster = "https://image.tmdb.org/t/p/w500"

@@ -14,7 +14,7 @@ class PriorityDataFilmTableViewCell: UITableViewCell {
     @IBOutlet weak var filmName: UILabel!
     @IBOutlet weak var filmImage: UIImageView!
     @IBOutlet weak var releaseDate: UILabel!
-    @IBOutlet weak var genre: UILabel!
+    @IBOutlet weak var voteAverage: UILabel!
     
     
     override func awakeFromNib() {
@@ -25,7 +25,7 @@ class PriorityDataFilmTableViewCell: UITableViewCell {
     func configure(with post: Post) {
         filmImage.sd_setImage(with: post.filmImageName)
         filmImage.clipsToBounds = true
-        genre.text = post.genre
+        voteAverage.text = "\(post.voteAverage)"
         filmName.text = post.filmName
         releaseDate.text = post.releaseDate
     }

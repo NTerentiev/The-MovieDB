@@ -39,7 +39,7 @@
                                 <rect key="frame" x="0.0" y="48" width="414" height="56"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                                 <color key="tintColor" systemColor="systemOrangeColor"/>
-                                <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.095817142689999996" green="0.064063216790000002" blue="0.21178714609999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="xcQ-OL-yfb"/>
@@ -73,14 +73,29 @@
         <!--Favorites-->
         <scene sceneID="lyt-WY-fnX">
             <objects>
-                <viewController id="OVn-12-bb9" customClass="FavoriteViewController" customModule="The_MovieDB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoriteVC" id="OVn-12-bb9" customClass="FavoriteViewController" customModule="The_MovieDB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V1N-DN-Xj0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jzJ-QT-t6z">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="4XR-sS-1if"/>
                         <color key="backgroundColor" red="0.3353281347" green="0.63438552479999999" blue="0.70498510489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="jzJ-QT-t6z" firstAttribute="top" secondItem="V1N-DN-Xj0" secondAttribute="top" id="4R6-6S-nKt"/>
+                            <constraint firstItem="jzJ-QT-t6z" firstAttribute="bottom" secondItem="4XR-sS-1if" secondAttribute="bottom" id="OpN-xA-Thd"/>
+                            <constraint firstItem="jzJ-QT-t6z" firstAttribute="trailing" secondItem="4XR-sS-1if" secondAttribute="trailing" id="e9m-EA-mwT"/>
+                            <constraint firstItem="jzJ-QT-t6z" firstAttribute="leading" secondItem="4XR-sS-1if" secondAttribute="leading" id="fps-Qg-dog"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favorites" image="star.circle.fill" catalog="system" id="VEb-oT-aix"/>
+                    <connections>
+                        <outlet property="tableView" destination="jzJ-QT-t6z" id="Jv5-O8-hmq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BGs-Yb-Mec" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,15 +10,15 @@ import UIKit
 struct Post {
 
 var filmImageName: URL?
-var filmName: String
+var filmName: String?
 var releaseDate: String
-var genre: String
+var voteAverage: Double
     
     init(request result: Results) {
-        self.filmImageName = URL(string: APIs.poster.rawValue + (result.poster_path ?? "") )
-        self.filmName = result.title ?? ""
+        self.filmImageName = URL(string: Net.poster + (result.poster_path ?? "") )
+        self.filmName = result.title
         self.releaseDate =  result.release_date ?? ""
-        self.genre = "later"
+        self.voteAverage = result.vote_average ?? 7.2
     }
 
 }
