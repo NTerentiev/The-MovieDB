@@ -80,16 +80,23 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jzJ-QT-t6z">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.095817142689999996" green="0.064063216790000002" blue="0.21178714609999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" red="0.095817142689999996" green="0.064063216790000002" blue="0.21178714609999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="sectionIndexBackgroundColor" red="0.095817142689999996" green="0.064063216790000002" blue="0.21178714609999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="OVn-12-bb9" id="cIA-XM-evj"/>
+                                    <outlet property="delegate" destination="OVn-12-bb9" id="iji-77-P9j"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4XR-sS-1if"/>
-                        <color key="backgroundColor" red="0.3353281347" green="0.63438552479999999" blue="0.70498510489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.047118134800000003" green="0.13398557899999999" blue="0.2353069186" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="jzJ-QT-t6z" firstAttribute="top" secondItem="V1N-DN-Xj0" secondAttribute="top" id="4R6-6S-nKt"/>
-                            <constraint firstItem="jzJ-QT-t6z" firstAttribute="bottom" secondItem="4XR-sS-1if" secondAttribute="bottom" id="OpN-xA-Thd"/>
-                            <constraint firstItem="jzJ-QT-t6z" firstAttribute="trailing" secondItem="4XR-sS-1if" secondAttribute="trailing" id="e9m-EA-mwT"/>
-                            <constraint firstItem="jzJ-QT-t6z" firstAttribute="leading" secondItem="4XR-sS-1if" secondAttribute="leading" id="fps-Qg-dog"/>
+                            <constraint firstItem="jzJ-QT-t6z" firstAttribute="leading" secondItem="4XR-sS-1if" secondAttribute="leading" id="7lM-Bd-sEz"/>
+                            <constraint firstItem="jzJ-QT-t6z" firstAttribute="top" secondItem="V1N-DN-Xj0" secondAttribute="top" id="Leb-Ze-y2E"/>
+                            <constraint firstItem="jzJ-QT-t6z" firstAttribute="bottom" secondItem="4XR-sS-1if" secondAttribute="bottom" id="SfC-9F-p69"/>
+                            <constraint firstItem="jzJ-QT-t6z" firstAttribute="trailing" secondItem="4XR-sS-1if" secondAttribute="trailing" id="uVQ-5q-STg"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favorites" image="star.circle.fill" catalog="system" id="VEb-oT-aix"/>

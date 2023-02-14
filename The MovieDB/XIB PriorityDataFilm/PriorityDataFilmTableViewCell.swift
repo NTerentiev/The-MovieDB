@@ -29,6 +29,8 @@ class PriorityDataFilmTableViewCell: UITableViewCell {
         filmName.text = post.filmName
         releaseDate.text = post.releaseDate
     }
+    
+    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

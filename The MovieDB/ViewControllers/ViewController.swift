@@ -10,9 +10,7 @@ import SDWebImage
 
 class ViewController: UIViewController {
     
-    
-    let userDefaults = UserDefaults.standard
-    
+
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             let nib = UINib(nibName: "PriorityDataFilmTableViewCell", bundle: nil)
@@ -49,10 +47,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) ->
     UISwipeActionsConfiguration? {
         let swipeFavourite = UIContextualAction(style: .destructive, title: "Save") { (action, view, completion) in
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let viewController = storyboard.instantiateViewController(withIdentifier: "FavoriteVC") as! FavoriteViewController
-            viewController.favoriteFilmArray.append(self.viewModel.arrayTitleFilm[indexPath.row])
-            viewController.userDefaults.set(viewController.favoriteFilmArray, forKey: "favoriteFilmArray")
+            Data.shared.arrayFilm.append(self.viewModel.arrayTitleFilm[indexPath.row])
             print ("Save")
             completion(true)
         }
