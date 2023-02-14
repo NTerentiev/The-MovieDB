@@ -10,7 +10,8 @@ import SDWebImage
 
 class ViewController: UIViewController {
     
-
+    let defaults = UserDefaults.standard
+    
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             let nib = UINib(nibName: "PriorityDataFilmTableViewCell", bundle: nil)
@@ -18,14 +19,30 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    
+    
     let viewModel = TrendsViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.getData {
+        viewModel.getDataMovies {
             self.tableView.reloadData()
         }
-        
+    }
+    
+    
+    @IBAction func segmentedControl(_ sender: UISegmentedControl) {
+        self.viewModel.arrayTitleFilm.removeAll()
+        if sender.selectedSegmentIndex == 0 {
+            viewModel.getDataMovies {
+                self.tableView.reloadData()
+            }
+        } else {
+            viewModel.getDataSerials {
+                self.tableView.reloadData()
+            }
+        }
     }
 }
 
@@ -48,6 +65,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     UISwipeActionsConfiguration? {
         let swipeFavourite = UIContextualAction(style: .destructive, title: "Save") { (action, view, completion) in
             Data.shared.arrayFilm.append(self.viewModel.arrayTitleFilm[indexPath.row])
+            Data.shared.arrayFilm = Array(Set(Data.shared.arrayFilm))
+            self.defaults.set(Data.shared.arrayFilm, forKey: "favorites")
             print ("Save")
             completion(true)
         }

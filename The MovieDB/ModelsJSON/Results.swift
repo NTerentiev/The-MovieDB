@@ -9,6 +9,7 @@ import Foundation
 struct Results : Codable {
     let backdrop_path : String?
     let id : Int?
+    let name: String?
     let title : String?
     let original_language : String?
     let original_title : String?
@@ -25,6 +26,7 @@ struct Results : Codable {
 
         case backdrop_path = "backdrop_path"
         case id = "id"
+        case name = "name"
         case title = "title"
         case original_language = "original_language"
         case original_title = "original_title"

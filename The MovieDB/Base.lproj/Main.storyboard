@@ -26,6 +26,9 @@
                                 </segments>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <color key="selectedSegmentTintColor" red="0.50873654525221201" green="0.77326625212262401" blue="0.7159752159416406" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="segmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="XFd-nl-ivI"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2Vh-zc-dD4">
                                 <rect key="frame" x="0.0" y="170" width="414" height="643"/>

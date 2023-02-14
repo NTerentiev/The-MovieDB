@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Post {
+struct Post: Hashable {
 
 var filmImageName: URL?
 var filmName: String?
@@ -16,9 +16,13 @@ var voteAverage: Double
     
     init(request result: Results) {
         self.filmImageName = URL(string: Net.poster + (result.poster_path ?? "") )
-        self.filmName = result.title
+        if result.title == nil {
+            self.filmName = result.name
+        } else { self.filmName = result.title
+        }
+//        self.filmName = result.title
         self.releaseDate =  result.release_date ?? ""
-        self.voteAverage = result.vote_average ?? 7.2
+        self.voteAverage = round((result.vote_average ?? 7.2) * 10)/10
     }
 
 }
