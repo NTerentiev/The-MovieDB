@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 struct Post: Hashable {
 
 var filmImageName: URL?
 var filmName: String?
-var releaseDate: String
+var releaseDate: String?
 var voteAverage: Double
     
     init(request result: Results) {
@@ -21,7 +22,11 @@ var voteAverage: Double
         } else { self.filmName = result.title
         }
 //        self.filmName = result.title
-        self.releaseDate =  result.release_date ?? ""
+        if result.release_date == nil {
+            self.releaseDate = result.first_air_date?.components(separatedBy: "-").first! ?? ""
+        } else {
+            self.releaseDate = result.release_date?.components(separatedBy: "-").first! ?? ""
+        }
         self.voteAverage = round((result.vote_average ?? 7.2) * 10)/10
     }
 
@@ -29,3 +34,4 @@ var voteAverage: Double
 
 
 
+//first_air_date

@@ -66,7 +66,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let swipeFavourite = UIContextualAction(style: .destructive, title: "Save") { (action, view, completion) in
             Data.shared.arrayFilm.append(self.viewModel.arrayTitleFilm[indexPath.row])
             Data.shared.arrayFilm = Array(Set(Data.shared.arrayFilm))
-            self.defaults.set(Data.shared.arrayFilm, forKey: "favorites")
             print ("Save")
             completion(true)
         }

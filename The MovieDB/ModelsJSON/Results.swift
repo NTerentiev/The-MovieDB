@@ -16,8 +16,9 @@ struct Results : Codable {
     let overview : String?
     let poster_path : String?
     let media_type : String?
-    let genre_ids : [Int]?
+    let genre_ids : [Genres]
     let popularity : Double?
+    let first_air_date: String?
     let release_date : String?
     let vote_average : Double?
     let vote_count : Int?
@@ -35,6 +36,7 @@ struct Results : Codable {
         case media_type = "media_type"
         case genre_ids = "genre_ids"
         case popularity = "popularity"
+        case first_air_date = "first_air_date"
         case release_date = "release_date"
         case vote_average = "vote_average"
         case vote_count = "vote_count"

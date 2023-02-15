@@ -16,6 +16,8 @@
 		1471B42029914EDB0046B1BA /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1471B41F29914EDB0046B1BA /* Results.swift */; };
 		1471B42229914EE80046B1BA /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1471B42129914EE80046B1BA /* Media.swift */; };
 		1471B42429914EF30046B1BA /* Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1471B42329914EF30046B1BA /* Genres.swift */; };
+		14A19A4B299BD46D0030A429 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 14A19A4A299BD46D0030A429 /* Realm */; };
+		14A19A4D299BD46D0030A429 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 14A19A4C299BD46D0030A429 /* RealmSwift */; };
 		14ADFC0629910B950008F40E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ADFC0529910B950008F40E /* AppDelegate.swift */; };
 		14ADFC0829910B950008F40E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ADFC0729910B950008F40E /* SceneDelegate.swift */; };
 		14ADFC0A29910B950008F40E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ADFC0929910B950008F40E /* ViewController.swift */; };
@@ -58,6 +60,8 @@
 			files = (
 				14ADFC2129910C9F0008F40E /* SDWebImage in Frameworks */,
 				14ADFC1B29910C590008F40E /* Alamofire in Frameworks */,
+				14A19A4B299BD46D0030A429 /* Realm in Frameworks */,
+				14A19A4D299BD46D0030A429 /* RealmSwift in Frameworks */,
 				14ADFC1E29910C900008F40E /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,6 +178,8 @@
 				14ADFC1A29910C590008F40E /* Alamofire */,
 				14ADFC1D29910C900008F40E /* Lottie */,
 				14ADFC2029910C9F0008F40E /* SDWebImage */,
+				14A19A4A299BD46D0030A429 /* Realm */,
+				14A19A4C299BD46D0030A429 /* RealmSwift */,
 			);
 			productName = "The MovieDB";
 			productReference = 14ADFC0229910B950008F40E /* The MovieDB.app */;
@@ -207,6 +213,7 @@
 				14ADFC1929910C590008F40E /* XCRemoteSwiftPackageReference "Alamofire" */,
 				14ADFC1C29910C900008F40E /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				14ADFC1F29910C9F0008F40E /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				14A19A49299BD46D0030A429 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 14ADFC0329910B950008F40E /* Products */;
 			projectDirPath = "";
@@ -476,6 +483,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		14A19A49299BD46D0030A429 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		14ADFC1929910C590008F40E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -503,6 +518,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		14A19A4A299BD46D0030A429 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 14A19A49299BD46D0030A429 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		14A19A4C299BD46D0030A429 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 14A19A49299BD46D0030A429 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
 		14ADFC1A29910C590008F40E /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 14ADFC1929910C590008F40E /* XCRemoteSwiftPackageReference "Alamofire" */;

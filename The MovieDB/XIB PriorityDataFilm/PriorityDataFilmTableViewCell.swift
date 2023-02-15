@@ -25,9 +25,9 @@ class PriorityDataFilmTableViewCell: UITableViewCell {
     func configure(with post: Post) {
         filmImage.sd_setImage(with: post.filmImageName)
         filmImage.clipsToBounds = true
-        voteAverage.text = "\(post.voteAverage)"
+        voteAverage.text = "Rating: \(post.voteAverage)"
         filmName.text = post.filmName
-        releaseDate.text = post.releaseDate
+        releaseDate.text = "(\(post.releaseDate ?? ""))"
     }
     
     
