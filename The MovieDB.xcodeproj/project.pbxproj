@@ -9,15 +9,17 @@
 /* Begin PBXBuildFile section */
 		089C8BC22992CDA30031AC32 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C8BC12992CDA30031AC32 /* Constans.swift */; };
 		089C8BC52992D3C10031AC32 /* TrendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C8BC42992D3C10031AC32 /* TrendsViewModel.swift */; };
+		140256FC29D0B636005B7647 /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 140256FB29D0B636005B7647 /* YouTubeiOSPlayerHelper */; };
+		140B7AC229A40A8300B1C7E8 /* Trailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140B7AC129A40A8300B1C7E8 /* Trailer.swift */; };
 		146E910E299AC29600A70FEC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146E910D299AC29500A70FEC /* DataManager.swift */; };
 		1471B41A2991451E0046B1BA /* PriorityDataFilmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1471B4182991451E0046B1BA /* PriorityDataFilmTableViewCell.swift */; };
 		1471B41B2991451E0046B1BA /* PriorityDataFilmTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1471B4192991451E0046B1BA /* PriorityDataFilmTableViewCell.xib */; };
 		1471B41E29914ECE0046B1BA /* TopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1471B41D29914ECE0046B1BA /* TopModel.swift */; };
 		1471B42029914EDB0046B1BA /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1471B41F29914EDB0046B1BA /* Results.swift */; };
-		1471B42229914EE80046B1BA /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1471B42129914EE80046B1BA /* Media.swift */; };
 		1471B42429914EF30046B1BA /* Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1471B42329914EF30046B1BA /* Genres.swift */; };
 		14A19A4B299BD46D0030A429 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 14A19A4A299BD46D0030A429 /* Realm */; };
 		14A19A4D299BD46D0030A429 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 14A19A4C299BD46D0030A429 /* RealmSwift */; };
+		14ADE0FA299E33CB00359167 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ADE0F9299E33CB00359167 /* DetailViewController.swift */; };
 		14ADFC0629910B950008F40E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ADFC0529910B950008F40E /* AppDelegate.swift */; };
 		14ADFC0829910B950008F40E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ADFC0729910B950008F40E /* SceneDelegate.swift */; };
 		14ADFC0A29910B950008F40E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ADFC0929910B950008F40E /* ViewController.swift */; };
@@ -34,13 +36,14 @@
 /* Begin PBXFileReference section */
 		089C8BC12992CDA30031AC32 /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
 		089C8BC42992D3C10031AC32 /* TrendsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendsViewModel.swift; sourceTree = "<group>"; };
+		140B7AC129A40A8300B1C7E8 /* Trailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trailer.swift; sourceTree = "<group>"; };
 		146E910D299AC29500A70FEC /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		1471B4182991451E0046B1BA /* PriorityDataFilmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityDataFilmTableViewCell.swift; sourceTree = "<group>"; };
 		1471B4192991451E0046B1BA /* PriorityDataFilmTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriorityDataFilmTableViewCell.xib; sourceTree = "<group>"; };
 		1471B41D29914ECE0046B1BA /* TopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopModel.swift; sourceTree = "<group>"; };
 		1471B41F29914EDB0046B1BA /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
-		1471B42129914EE80046B1BA /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		1471B42329914EF30046B1BA /* Genres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genres.swift; sourceTree = "<group>"; };
+		14ADE0F9299E33CB00359167 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		14ADFC0229910B950008F40E /* The MovieDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The MovieDB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14ADFC0529910B950008F40E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14ADFC0729910B950008F40E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +66,7 @@
 				14A19A4B299BD46D0030A429 /* Realm in Frameworks */,
 				14A19A4D299BD46D0030A429 /* RealmSwift in Frameworks */,
 				14ADFC1E29910C900008F40E /* Lottie in Frameworks */,
+				140256FC29D0B636005B7647 /* YouTubeiOSPlayerHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +86,7 @@
 			children = (
 				1471B41D29914ECE0046B1BA /* TopModel.swift */,
 				1471B41F29914EDB0046B1BA /* Results.swift */,
-				1471B42129914EE80046B1BA /* Media.swift */,
+				140B7AC129A40A8300B1C7E8 /* Trailer.swift */,
 				1471B42329914EF30046B1BA /* Genres.swift */,
 			);
 			path = ModelsJSON;
@@ -113,11 +117,11 @@
 				14ADFC2529913C370008F40E /* ViewControllers */,
 				1471B41C29914EA20046B1BA /* ModelsJSON */,
 				089C8BC32992D38D0031AC32 /* ViewModels */,
+				089C8BC12992CDA30031AC32 /* Constans.swift */,
 				14ADFC0E29910B970008F40E /* Assets.xcassets */,
 				14ADFC0B29910B950008F40E /* Main.storyboard */,
 				14ADFC1029910B970008F40E /* LaunchScreen.storyboard */,
 				14ADFC1329910B970008F40E /* Info.plist */,
-				089C8BC12992CDA30031AC32 /* Constans.swift */,
 			);
 			path = "The MovieDB";
 			sourceTree = "<group>";
@@ -137,6 +141,7 @@
 			children = (
 				14ADFC0929910B950008F40E /* ViewController.swift */,
 				14ADFC2229913C1D0008F40E /* FavoriteViewController.swift */,
+				14ADE0F9299E33CB00359167 /* DetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 				14ADFC2029910C9F0008F40E /* SDWebImage */,
 				14A19A4A299BD46D0030A429 /* Realm */,
 				14A19A4C299BD46D0030A429 /* RealmSwift */,
+				140256FB29D0B636005B7647 /* YouTubeiOSPlayerHelper */,
 			);
 			productName = "The MovieDB";
 			productReference = 14ADFC0229910B950008F40E /* The MovieDB.app */;
@@ -214,6 +220,7 @@
 				14ADFC1C29910C900008F40E /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				14ADFC1F29910C9F0008F40E /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				14A19A49299BD46D0030A429 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				140256FA29D0B636005B7647 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */,
 			);
 			productRefGroup = 14ADFC0329910B950008F40E /* Products */;
 			projectDirPath = "";
@@ -243,15 +250,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14ADE0FA299E33CB00359167 /* DetailViewController.swift in Sources */,
 				089C8BC52992D3C10031AC32 /* TrendsViewModel.swift in Sources */,
 				14ADFC0A29910B950008F40E /* ViewController.swift in Sources */,
 				1471B42429914EF30046B1BA /* Genres.swift in Sources */,
 				14ADFC0629910B950008F40E /* AppDelegate.swift in Sources */,
+				140B7AC229A40A8300B1C7E8 /* Trailer.swift in Sources */,
 				1471B42029914EDB0046B1BA /* Results.swift in Sources */,
 				1471B41E29914ECE0046B1BA /* TopModel.swift in Sources */,
 				089C8BC22992CDA30031AC32 /* Constans.swift in Sources */,
 				14ADFC2829913F2D0008F40E /* cellModel.swift in Sources */,
-				1471B42229914EE80046B1BA /* Media.swift in Sources */,
 				1471B41A2991451E0046B1BA /* PriorityDataFilmTableViewCell.swift in Sources */,
 				14ADFC2329913C1D0008F40E /* FavoriteViewController.swift in Sources */,
 				146E910E299AC29600A70FEC /* DataManager.swift in Sources */,
@@ -483,6 +491,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		140256FA29D0B636005B7647 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/youtube/youtube-ios-player-helper";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.4;
+			};
+		};
 		14A19A49299BD46D0030A429 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift";
@@ -518,6 +534,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		140256FB29D0B636005B7647 /* YouTubeiOSPlayerHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 140256FA29D0B636005B7647 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
+			productName = YouTubeiOSPlayerHelper;
+		};
 		14A19A4A299BD46D0030A429 /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 14A19A49299BD46D0030A429 /* XCRemoteSwiftPackageReference "realm-swift" */;

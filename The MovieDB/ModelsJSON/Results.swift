@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct Results : Codable {
+struct Results: Codable {
     let backdrop_path : String?
     let id : Int?
     let name: String?
@@ -16,7 +16,7 @@ struct Results : Codable {
     let overview : String?
     let poster_path : String?
     let media_type : String?
-    let genre_ids : [Genres]
+    let genre_ids : [Int]?
     let popularity : Double?
     let first_air_date: String?
     let release_date : String?
