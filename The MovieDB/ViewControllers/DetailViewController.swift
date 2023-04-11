@@ -26,23 +26,33 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
     }
     
     func config() {
-        if let post = post {
-            imageView.sd_setImage(with: URL(string: post.filmImageName ?? ""))
-            nameLabel.text = post.filmName
-            releaseDateLabel.text = post.releaseDate
-            voteAverageLabel.text = "Average: \(String(post.voteAverage))"
-            descriptionLabel.text = post.deskription
-            if post.trailer != "" {
-                // загружаем видео, если есть идентификатор
-                playerView.load(withVideoId: post.trailer!)
-                playerView.isHidden = false
-                playerView.isUserInteractionEnabled = true
-                playerView.delegate = self
-            } else {
-                // скрываем видео, если идентификатор отсутствует
-                playerView.isHidden = true
-                playerView.isUserInteractionEnabled = false
-            }
+        // Проверяем наличие объекта Post, используя guard let
+        guard let post = post else { return }
+        
+        // Устанавливаем изображение фильма
+        imageView.sd_setImage(with: URL(string: post.filmImageName ?? ""))
+        // Устанавливаем название фильма
+        nameLabel.text = post.filmName
+        // Устанавливаем дату выхода фильма
+        releaseDateLabel.text = post.releaseDate
+        // Устанавливаем среднюю оценку фильма вместе с текстом
+        voteAverageLabel.text = "Average: \(post.voteAverage)"
+        // Устанавливаем описание фильма
+        descriptionLabel.text = post.deskription
+        
+        // Скрываем видео и отключаем его интерактивность по умолчанию
+        playerView.isHidden = true
+        playerView.isUserInteractionEnabled = false
+        
+        // Если у поста есть трейлер
+        if !post.trailer!.isEmpty {
+            // Загружаем видео с идентификатором трейлера
+            playerView.load(withVideoId: post.trailer!)
+            // Отображаем видео и включаем его интерактивность
+            playerView.isHidden = false
+            playerView.isUserInteractionEnabled = true
+            // Назначаем делегатом View Controller, реализующий протокол YTPlayerViewDelegate
+            playerView.delegate = self
         }
     }
 }

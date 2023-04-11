@@ -71,4 +71,12 @@ extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource {
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        detailVC.post = Data.shared.arrayFilm[indexPath.row]
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
 }

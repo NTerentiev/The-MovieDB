@@ -36,7 +36,8 @@ class ViewController: UIViewController {
     // Обработка нажатия на Segmented Control
     @IBAction func segmentedControl(_ sender: UISegmentedControl) {
         viewModel.arrayTitleFilm.removeAll()
-        sender.selectedSegmentIndex == 0 ? viewModel.getDataMovies { self.tableView.reloadData() } : viewModel.getDataSerials { self.tableView.reloadData() }
+        sender.selectedSegmentIndex == 0 ? viewModel.getDataMovies { self.tableView.reloadData() } : viewModel.getDataSerials { self.tableView.reloadData()
+        }
     }
  }
 
@@ -84,12 +85,35 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
     }
     
+    
 }
 
-//extension ViewController: UISearchResultsUpdating {
-//
-//    func updateSearchResults(for searchController: UISearchController) {
-//
-//    }
-//
-//}
+extension ViewController: UISearchBarDelegate, UIGestureRecognizerDelegate {
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.searchMovies(query: searchText) {
+            self.tableView.reloadData()
+        }
+    }
+    
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        if searchBar.text == "" {
+            viewModel.cancelSearch()
+            viewModel.getDataMovies {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+         searchBar.text = ""
+         viewModel.cancelSearch()
+         viewModel.getDataMovies {
+             self.tableView.reloadData()
+         }
+        searchBar.resignFirstResponder()
+     }
+    
+}
