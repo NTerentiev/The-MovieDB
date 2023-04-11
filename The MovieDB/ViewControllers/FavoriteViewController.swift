@@ -7,8 +7,11 @@
 
 import UIKit
 import RealmSwift
+import Lottie
 
 class FavoriteViewController: UIViewController {
+    
+    private var animationView: LottieAnimationView?
     
     // ViewModel для представления трендов фильмов
     var viewModel = TrendsViewModel()
@@ -23,25 +26,36 @@ class FavoriteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Обновление таблицы при загрузке контроллера
-        self.tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("Reload")
         // Обновление таблицы при появлении контроллера на экране
         self.tableView.reloadData()
         getPost()
+        
     }
     
     // Получение сохраненных постов из Realm
     func getPost() {
         // Конвертация набора объектов Realm в массив
         Data.shared.arrayFilm = Array(Save.realm.objects(Post.self))
+        // Управление анимацией
+        Data.shared.arrayFilm.isEmpty ? showEmptyTableMessage() : (tableView.backgroundView = nil)
         // Удаление дубликатов
         Data.shared.arrayFilm = Array(Set(Data.shared.arrayFilm))
     }
+    
+    func showEmptyTableMessage() {
+        // Создаем анимацию и добавляем на задний фон таблицы
+        animationView = .init(name: "emptyBox")
+        animationView!.frame = view.bounds
+        animationView!.contentMode = .scaleAspectFit
+        animationView!.loopMode = .loop
+        tableView.backgroundView = animationView
+        animationView!.play()
+    }
+    
 }
 
 extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource {
@@ -67,6 +81,7 @@ extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource {
             print("Deleted")
             // Удаление сохраненного фильма из массива
             Data.shared.arrayFilm.remove(at: indexPath.row)
+            Data.shared.arrayFilm.isEmpty ? showEmptyTableMessage() : (tableView.backgroundView = nil)
             // Удаление строки из таблицы
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
         }

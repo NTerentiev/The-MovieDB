@@ -53,7 +53,7 @@
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CLM-fh-Rt8">
                         <rect key="frame" x="0.0" y="203" width="495" height="12"/>
-                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.50199484829999996" green="0.66170799729999996" blue="0.70197045800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="12" id="Qgh-KK-e9b"/>
                         </constraints>

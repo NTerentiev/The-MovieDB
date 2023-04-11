@@ -8,8 +8,11 @@
 import UIKit
 import SDWebImage
 import RealmSwift
+import Lottie
 
 class ViewController: UIViewController {
+    
+    private var animationView: LottieAnimationView?
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -27,6 +30,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Получение данных фильмов
         viewModel.getDataMovies {
             self.tableView.reloadData()
@@ -90,9 +94,19 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension ViewController: UISearchBarDelegate, UIGestureRecognizerDelegate {
 
+    func animated() {
+        animationView = .init(name: "NoFound")
+        animationView!.frame = view.bounds
+        animationView!.contentMode = .scaleAspectFit
+        animationView!.loopMode = .loop
+        tableView.backgroundView = animationView
+        animationView!.play()
+    }
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         viewModel.searchMovies(query: searchText) {
             self.tableView.reloadData()
+            self.viewModel.arrayTitleFilm.isEmpty ? self.animated() : (self.tableView.backgroundView = nil)
         }
     }
     
@@ -108,12 +122,12 @@ extension ViewController: UISearchBarDelegate, UIGestureRecognizerDelegate {
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-         searchBar.text = ""
          viewModel.cancelSearch()
          viewModel.getDataMovies {
              self.tableView.reloadData()
+             searchBar.resignFirstResponder()
+             print("Сработало")
          }
-        searchBar.resignFirstResponder()
      }
     
 }
